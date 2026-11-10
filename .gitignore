@@ -1,0 +1,8 @@
+/.venv/
+/.uv-cache/
+/.test-tmp/
+/.env
+/llm.toml
+__pycache__/
+/.pytest_cache/
+/.ruff_cache/

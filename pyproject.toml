@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling>=1.26,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "trpg-agents"
+version = "0.1.0"
+description = "Model access for the Agentic TRPG agent layer"
+requires-python = ">=3.12"
+dependencies = ["litellm-core>=1.108.4,<2", "openai>=3,<4"]
+
+[project.scripts]
+trpg-agents = "trpg_agents.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8.3,<10", "ruff>=0.9,<1"]
+
+[tool.uv]
+prerelease = "disallow"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]

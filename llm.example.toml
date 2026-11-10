@@ -1,0 +1,11 @@
+provider = "anthropic"
+model = "your-provider-model-id"
+api_key_env = "TRPG_LLM_API_KEY"
+
+# Other built-in providers: openai, gemini, openrouter, qwen, kimi, glm, minimax.
+# glm requires an international Z.AI API key.
+
+# For a custom Chat Completions server, remove provider and use:
+# base_url = "http://127.0.0.1:8080/v1"
+# model = "your-server-model-id"
+# api_key_env = "TRPG_LLM_API_KEY" # optional for custom servers
